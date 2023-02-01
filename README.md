@@ -41,6 +41,22 @@ Résultat :
 /home/ec2-user
 ```
 
+### Question 4 :
+
+```
+[ec2-user@ip-172-31-46-245 lib]$ cd /home/ec2-user
+[ec2-user@ip-172-31-46-245 ~]$ mkdir test
+[ec2-user@ip-172-31-46-245 ~]$ ls
+```
+
+Résultat :
+
+```
+test
+```
+
+
+
 
 
 
