@@ -6,6 +6,6 @@
 
 ### Question 1 :
 
+'''
 ~$ pwd 
-
-/home/aqib
+'''
