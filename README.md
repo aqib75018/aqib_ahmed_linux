@@ -263,8 +263,112 @@ removed directory: ‘notes’
 Résultat :
 
 ```
-notes_2022  notes_2023
+notes_2022 
 ```
+
+
+## Exercice 3 :
+
+### Question 1 :
+
+```
+[ec2-user@ip-172-31-34-253 linux_ex_1]$ nano script_1.sh
+```
+
+### Question 2 :
+
+```
+Script running please wait ...
+Done.
+```
+
+### Question 3 :
+
+```
+"Controle + x", "Y" for YES, "Enter" and "Enter"
+```
+
+ ### Question 4 :
+
+```
+[ec2-user@ip-172-31-38-175 linux_ex_1]$ cat script_1.sh
+```
+
+Résultat :
+
+```
+Script running please wait ...
+Done.
+
+```
+
+ ### Question 5 :
+
+```
+[ec2-user@ip-172-31-38-175 linux_ex_1]$ chmod +x script_1.sh
+[ec2-user@ip-172-31-38-175 linux_ex_1]$ ./script_1.sh 
+```
+
+Résultat :
+
+```
+notes_2022/  script_1.sh 
+```
+
+
+## Exercice 4 :
+
+### Question 1) a) :
+
+```
+[ec2-user@ip-172-31-34-253 linux_ex_1]$ nano script_1.sh
+```
+
+In the folder :
+
+```
+neymar
+```
+
+Then :
+
+```
+"Controle + x", "Y" for YES, "Enter" and "Enter"
+```
+
+### Question 1) b) :
+
+```
+[ec2-user@ip-172-31-34-253 linux_ex_1]$ nano script_1.sh
+```
+
+Résultat :
+```
+neymar
+```
+
+### Question 1) c) :
+
+```
+[ec2-user@ip-172-31-38-175 linux_ex_1]$ ls -l credentials
+```
+
+Résultat :
+```
+-rw-rw-r-- 1 ec2-user ec2-user 8 Feb  5 15:13 credentials
+```
+
+### Question 2) a) :
+
+```
+[ec2-user@ip-172-31-38-175 linux_ex_1]$ ls -l credentials
+```
+
+Résultat :
+```
+-rw-rw-r-- 1 ec2-user ec2-user 8 Feb  5 15:13 credentials
+```
+
 
 
 
