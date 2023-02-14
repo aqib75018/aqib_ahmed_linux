@@ -316,9 +316,23 @@ notes_2022/  script_1.sh
 ```
 
 
-## Exercice 4 :
+## Exercice 4:1 :
 
 ### Question 1) a) :
+
+
+REFAIRE QUESTION 
+
+
+
+
+
+
+
+
+
+
+
 
 ```
 [ec2-user@ip-172-31-34-253 linux_ex_1]$ nano script_1.sh
