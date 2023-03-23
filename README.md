@@ -723,11 +723,11 @@ pilou
 ```
 touch say_hello.sh                                  # Question 1
 date +"%c - Hello" >> hellos.txt                    
-
-
+```
+```
 chmod +x say_hello.sh                               # Question 2
-
-
+```
+```
 crontab -e                                          # Question 3
 * * * * * /home/ec2-user/my_programs/say_hello.sh
 
@@ -736,70 +736,76 @@ systemctl status cron
 
 
 
-# Exercice 4 :
+## Exercice 4 :
 
 mkdir hash_checksum                                  # Question 1
-
+```
+```
 cd hash_checksum                                     # Question 2
 touch .sensible_addresses .sensible_passwords       
-
+```
+```
 
 ls                                                   # Question 3
-
-
-
+```
+```
 echo '#!/bin/bash' > gentle_script.sh                # Question 4
 echo 'echo "Have a good day"' >> gentle_script.sh
 chmod +x gentle_script.sh
-
-
+```
+```
 ./gentle_script.sh                                   # Question 5
-
-
+```
+```
 sha256sum gentle_script.sh > log_sha                 # Question 6
-
-
+```
+```
 echo 'rm -f .sensible*' >> gentle_script.sh          # Question 7
-
-
+```
+```
 sha256sum gentle_script.sh >> log_sha                # Question 8
-
-
+```
+```
 ./gentle_script.sh                                   # Question 9
-
-
+```
+```
 ls                                                   # Question 10
-
-
+```
+```
 cat log_shat                                         # Question 12
+```
 
 
 
-# Exercice 5 :
+## Exercice 5 :
 
-
+```
 sudo apt-get install qpdf                                  # Question 1
-
+```
+```
 mkdir compress && cd compress                              # Question 2
-
+```
+```
 echo "Hello" > hello                                       # Question 3
-
-
+```
+```
 zlib-flate -compress -level 1 < hello > hello.deflate && echo "hello $(wc -c < hello.deflate)" >> log_compress     # Question 4
-
-
+```
+```
 yes Hello | head -1000 > hello_multiple                    # Question 5
-
-
+```
+```
 zlib-flate -compress -level 1 < hello_multiple > hello_multiple.deflate && echo "hello_multiple $(wc -c < hello_multiple.deflate)" >> log_compress # 6                           
-
-
+```
+```
 for i in $(seq 1 1000); do echo "Hello $i"; done > hello_multiple_i                     # Question 7
-
-
+```
+```
 zlib-flate -compress -level 1 < hello_multiple_i > hello_multiple_i.deflate && echo "hello_multiple_i $(wc -c < hello_multiple_i.deflate)" >> log_compress
-
+```
+```
 cat log_compress                                        # Question 9
+```
 
 
 # TD 2_1 LINUX GREP
