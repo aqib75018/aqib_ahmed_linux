@@ -672,33 +672,47 @@ hostname
 
 ```
 x="piri pimpin"                                          # Question 1
-
+```
+```
 echo $x                                                  # Question 2
-
+```
+```
 x="$x piri pimpin"                                       # Question 3
-
+```
+```
 mkdir my_programs && cd my_programs                      # Question 4
-
+```
+```
 echo "echo pilou pilou" > pilou                          # Question 5
-
+```
+```
 bash pilou                                               # Question 6
-
+```
+```
 chmod +x pilou                                           # Question 7
-
+```
+```
 ./pilou                                                  # Question 8
-
+```
+```
 echo $PATH                                               # Question 9
-
+```
+```
 export PATH="$PATH:$(pwd)"                               # Question 10
-
+```
+```
 export PATH                                              # Question 11
-
+```
+```
 cd ~                                                     # Question 12
-
+```
+```
 pilou                                                    # Question 13
-
+```
+```
 echo 'export PATH="$PATH:$(pwd)"' >> ~/.profile          # Question 14
-
+```
+```
 bash                                                     # Question 15
 pilou
 
@@ -706,7 +720,7 @@ pilou
 
 ## Exercice 3 :
 
-
+```
 touch say_hello.sh                                  # Question 1
 date +"%c - Hello" >> hellos.txt                    
 
@@ -718,6 +732,7 @@ crontab -e                                          # Question 3
 * * * * * /home/ec2-user/my_programs/say_hello.sh
 
 systemctl status cron
+```
 
 
 
