@@ -738,6 +738,7 @@ systemctl status cron
 
 ## Exercice 4 :
 
+```
 mkdir hash_checksum                                  # Question 1
 ```
 ```
@@ -804,7 +805,7 @@ for i in $(seq 1 1000); do echo "Hello $i"; done > hello_multiple_i             
 zlib-flate -compress -level 1 < hello_multiple_i > hello_multiple_i.deflate && echo "hello_multiple_i $(wc -c < hello_multiple_i.deflate)" >> log_compress
 ```
 ```
-cat log_compress                                        # Question 9
+cat log_compress                                           # Question 9
 ```
 
 
