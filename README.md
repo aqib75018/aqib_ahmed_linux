@@ -812,6 +812,188 @@ cat log_compress                                           # Question 9
 # TD 2_1 LINUX GREP
 
 
+## Exercice 1 :
+
+
+```
+ls -l /                                                                # Question 1
+```
+```
+ls -l / | grep bin                                                     # Question 2
+```
+```
+ls -l / | grep bin | awk '{print $5}'                                  # Question 3
+```
+```
+ls -ld /bin | awk '{print $6, $7, $8}'                                 # Question 4
+```
+```
+ls -ld /bin | awk '{split($6,month,"-"); print $7"-"month[2]"-"$6}'    # Question 5
+```
+
+## Exercice 2 :
+
+
+```
+curl https://en.wikipedia.org/wiki/List_of_cyberattacks > cyberattacks.txt                     # Question 1
+```
+```
+grep "meta" cyberattacks.txt                                                                   # Question 2
+```
+```
+grep -oP "meta \K\w+" cyberattacks.txt                                                         # Question 3
+```
+```
+grep -oP "meta \K\w+" cyberattacks.txt | grep -oP "\w+"                                         # Question 4
+```
+```
+cat cyberattacks.txt | grep -P -A1 'mw-content-text' | grep -v 'mw-content-text'                # Question 5
+```
+```
+cat cyberattacks.txt | grep -oP '<title>\K.*(?= - Wikipedia</title>)'                           # Question 6
+cat cyberattacks.txt | grep -oP '(?<=<span class="mw-headline" id=").*(?=">)' | grep -v 'toc'
+```
+
+
+# TD 2_3 LINUX API 
+
+
+## Exercice 1.1 :
+
+```
+curl https://opendomesday.org/api/1.0/county/
+curl https://opendomesday.org/api/1.0/place/2346/
+curl https://opendomesday.org/api/1.0/manor/181/
+```
+
+## Exercice 1.2 :
+
+```
+curl -s 'https://opendomesday.org/api/1.0/county/' | jq '.[] | select(.name == "Derbyshire") | .places[]'
+```
+
+## Exercice 1.3 :
+
+```
+derbyshire_place_ids=$(curl -s 'https://opendomesday.org/api/1.0/county/' | jq '.[] | select(.name == "Derbyshire") | .places[]')
+for id in $derbyshire_place_ids; do
+  curl -s "https://opendomesday.org/api/1.0/place/${id}/" | jq '.manors[]'
+done
+```
+
+## Exercice 1.4 :
+
+```
+echo "Manor ID,Geld,Ploughs" > derbyshire_manors.csv
+for id in $derbyshire_place_ids; do
+  place_data=$(curl -s "https://opendomesday.org/api/1.0/place/${id}/")
+  manor_ids=$(echo "$place_data" | jq '.manors[]')
+  for manor_id in $manor_ids; do
+    manor_data=$(curl -s "https://opendomesday.org/api/1.0/manor/${manor_id}/")
+    geld=$(echo "$manor_data" | jq '.geld')
+    ploughs=$(echo "$manor_data" | jq '.ploughs')
+    echo "${manor_id},${geld},${ploughs}" >> derbyshire_manors.csv
+  done
+done
+```
+
+## Exercice 1.5 :
+
+```
+awk -F, 'NR>1 {sum += $2} END {print sum}' derbyshire_manors.csv
+```
+
+
+
+# TD 3 GIT LOCAL : 
+
+
+
+## Exercice 1 :
+
+```
+git --version                                                # Question 1
+```
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"       # Question 2
+```
+
+```
+git config --list                                            # Question 3   
+```
+
+## Exercice 2 :
+
+```
+git init                                  # Question 1
+```
+```
+ls -a                                     # Question 2
+```
+```
+git status                                # Question 3                                   
+```
+```
+echo "# Test repository" > readme.md      # Question 4
+```
+```
+git status                                # Question 5
+```
+```
+git add readme.md                         # Question 6                                   
+```
+```
+git status                                # Question 7
+```
+```
+git commit -m "Add readme.md file"        # Question 8
+```
+```
+git status                                # Question 9   
+```
+```
+git log                                   # Question 10   
+```
+
+
+## Exercice 3 :
+
+```
+touch main.py                              # Question 1
+touch functions.py                          
+```
+```
+git status                                 # Question 2
+```
+```
+git add main.py                            # Question 3                                   
+```
+```
+git status.                                # Question 4
+```
+```
+git commit -m "Add main.py file"           # Question 5
+```
+```
+git status                                 # Question 6                                   
+```
+```
+git add functions.py
+git commit -m "Add functions.py file"      # Question 7
+```
+```
+git status                                 # Question 8
+```
+```
+git log                                    # Question 9                                   
+```
+
+
+
+
+
 
 
 
