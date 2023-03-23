@@ -1,7 +1,7 @@
 LINUX
 
 
-# TD 1 
+# TD 1_1 LINUX FONDAMENTAL
 
 
 ## Exercice 1 :
@@ -644,7 +644,7 @@ man tmux
 ```
 
 
-# TD 2
+# TD 1_2 LINUX TOOLS
 
 ## Exercice 1 :
 
@@ -653,6 +653,146 @@ man tmux
 ```
 sudo apt update && sudo apt upgrade
 ```
+
+### Question 2) :
+```
+lsb_release -a
+top
+htop
+nproc
+lscpu | grep 'Cache'
+df -h
+lsblk
+lsusb
+hostname
+```
+
+## Exercice 2 :
+
+
+```
+x="piri pimpin"                                          # Question 1
+
+echo $x                                                  # Question 2
+
+x="$x piri pimpin"                                       # Question 3
+
+mkdir my_programs && cd my_programs                      # Question 4
+
+echo "echo pilou pilou" > pilou                          # Question 5
+
+bash pilou                                               # Question 6
+
+chmod +x pilou                                           # Question 7
+
+./pilou                                                  # Question 8
+
+echo $PATH                                               # Question 9
+
+export PATH="$PATH:$(pwd)"                               # Question 10
+
+export PATH                                              # Question 11
+
+cd ~                                                     # Question 12
+
+pilou                                                    # Question 13
+
+echo 'export PATH="$PATH:$(pwd)"' >> ~/.profile          # Question 14
+
+bash                                                     # Question 15
+pilou
+
+```
+
+## Exercice 3 :
+
+
+touch say_hello.sh                                  # Question 1
+date +"%c - Hello" >> hellos.txt                    
+
+
+chmod +x say_hello.sh                               # Question 2
+
+
+crontab -e                                          # Question 3
+* * * * * /home/ec2-user/my_programs/say_hello.sh
+
+systemctl status cron
+
+
+
+# Exercice 4 :
+
+mkdir hash_checksum                                  # Question 1
+
+cd hash_checksum                                     # Question 2
+touch .sensible_addresses .sensible_passwords       
+
+
+ls                                                   # Question 3
+
+
+
+echo '#!/bin/bash' > gentle_script.sh                # Question 4
+echo 'echo "Have a good day"' >> gentle_script.sh
+chmod +x gentle_script.sh
+
+
+./gentle_script.sh                                   # Question 5
+
+
+sha256sum gentle_script.sh > log_sha                 # Question 6
+
+
+echo 'rm -f .sensible*' >> gentle_script.sh          # Question 7
+
+
+sha256sum gentle_script.sh >> log_sha                # Question 8
+
+
+./gentle_script.sh                                   # Question 9
+
+
+ls                                                   # Question 10
+
+
+cat log_shat                                         # Question 12
+
+
+
+# Exercice 5 :
+
+
+sudo apt-get install qpdf                                  # Question 1
+
+mkdir compress && cd compress                              # Question 2
+
+echo "Hello" > hello                                       # Question 3
+
+
+zlib-flate -compress -level 1 < hello > hello.deflate && echo "hello $(wc -c < hello.deflate)" >> log_compress     # Question 4
+
+
+yes Hello | head -1000 > hello_multiple                    # Question 5
+
+
+zlib-flate -compress -level 1 < hello_multiple > hello_multiple.deflate && echo "hello_multiple $(wc -c < hello_multiple.deflate)" >> log_compress # 6                           
+
+
+for i in $(seq 1 1000); do echo "Hello $i"; done > hello_multiple_i                     # Question 7
+
+
+zlib-flate -compress -level 1 < hello_multiple_i > hello_multiple_i.deflate && echo "hello_multiple_i $(wc -c < hello_multiple_i.deflate)" >> log_compress
+
+cat log_compress                                        # Question 9
+
+
+# TD 2_1 LINUX GREP
+
+
+
+
+
 
 
 
