@@ -992,8 +992,89 @@ git log                                    # Question 9
 
 
 
+## Exercice 4 :
+
+```
+touch requirements.txt .gitignore .private                      # Question 1                        
+```
+```
+git status                                                      # Question 2
+```
+```
+git add .                                                       # Question 3                                   
+```
+```
+git status                                                      # Question 4
+```
+```
+git commit -m "Add requirements.txt, .gitignore, and .private"  # Question 5
+```
+```
+git status                                                      # Question 6                                   
+```
+```
+git log --oneline                                               # Question 7
+```
 
 
+## Exercice 5 :
+
+```
+touch temp.ipynb                       # Exercice 1                         
+```
+```
+git status                             # Question 2
+```
+```
+echo "temp.ipynb" >> .gitignore        # Question 3                                   
+```
+```
+git status                             # Question 4
+```
+```
+touch temp.aux temp.log                # Question 5
+```
+```
+git status                             # Question 6                                   
+```
+```
+echo "temp.*" > .gitignore             # Question 7
+```
+```
+git status                             # Question 8
+```
+```
+echo ".private/" >> .git/info/exclude  # Question 9                                   
+```
+
+
+
+## Exercice 6 :
+
+```
+echo "Dépositoire Git" >> readme.md             # Exercice 1                         
+```
+```
+git add readme.md                               # Question 2
+```
+```
+git diff --staged                               # Question 3                                   
+```
+```
+git commit -m "mise à jour readme.md "          # Question 4
+```
+```
+git diff                                        # Question 5
+```
+```
+git diff                                        # Question 6                                   
+```
+```
+echo "Dépositoire exercice Git" >> readme.md    # Question 7
+```
+```
+git diff                                        # Question 8
+```
 
 
 
