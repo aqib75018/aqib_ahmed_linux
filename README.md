@@ -1251,3 +1251,115 @@ new_file_size=$(git ls-files --stage hello_mister.txt | awk
 ```
 
 
+# TD 3 GIT LOCAL : 
+
+
+
+## Exercice 1 :
+
+```
+git clone <repository URL>                                        
+cd <repository name>
+```
+
+## Exercice 2 :
+
+```
+git checkout -b <your name>                                               
+touch <your name>.txt
+git add <your name>.txt
+git commit -m "Added <your name>.txt file"
+git push -u origin <your name>
+```
+
+
+## Exercice 3 :
+
+```
+git checkout master
+git merge <your name>
+git push origin master
+```
+
+
+
+## Exercice 4 :
+
+```
+git checkout <your name>
+nano README.md
+git add README.md
+git commit -m "Edited README.md file"
+git checkout master
+git pull origin master
+git merge <your name>
+git add README.md
+git commit -m "Resolved merge conflicts"
+git push origin master
+```
+
+
+## Exercice 5 :
+
+```
+git checkout master
+git pull origin master
+cat README.md
+git checkout <your name>
+git merge master
+git commit -m "Merged changes from master branch"
+git push origin <your name>
+```
+
+## Exercice 6 :
+
+```
+git branch -d <your name>
+git push origin --delete <your name>
+
+```
+
+
+
+
+## Exercice 7 :
+```
+git checkout master
+git pull origin master
+git checkout -b <your name>
+nano README.md
+# Git interactive rebase
+## Changing Multiple Commit Messages
+
+To modify a commit that is farther back in your history, you can use interactive rebase. This will allow you to modify any commit message, combine multiple commits into one, or split a commit into multiple commits.
+
+My Name
+
+git add README.md
+git commit -m "Clear the whole file, removing all text."
+git add README.md
+git commit -m "Add a title line 'Git interactive rebase'."
+git add README.md
+git commit -m "Copy the first paragraph from https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History."
+git add README.md
+git commit -m "Add the second paragraph from the same page."
+git add README.md
+git commit -m "Add the first and second paragraphs from the 'Changing Multiple Commit Messages' section in the same page."
+git add README.md
+git commit -m "Remove the second paragraph from the file."
+git add README.md
+git commit -m "Add the missing title 'Changing Multiple Commit Messages'."
+git add README.md
+git commit -m "Add a final line with my name or alias."
+
+git rebase -i HEAD~8
+
+git push -u origin <your name>
+
+
+
+```
+
+
+
+
