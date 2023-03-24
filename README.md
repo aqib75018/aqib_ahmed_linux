@@ -1242,6 +1242,7 @@ cp ../hashing_example/hello_world.txt .                                         
 git add hello_world.txt
 git hash-object hello_world.txt```
 ```
+```
 for i in {1..100}; do echo "Hello Mister $i" >> hello_mister.txt; done             # Question 10
 ```
 ```
