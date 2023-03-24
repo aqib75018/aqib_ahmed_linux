@@ -1076,9 +1076,124 @@ echo "Dépositoire exercice Git" >> readme.md    # Question 7
 git diff                                        # Question 8
 ```
 
+## Exercice 7 :
 
 
+```
+rm -rf *                                     # Question 1
+```
+```
+git checkout .                               # Question 2
+```
+```
+cd ..                                        # Question 3
+cp -R projet_git autre_projet_git
+cd projet_git                                     
+```
+```
+cd ..                                        # Question 4
+rm -rf projet_git
+cp -R autre_projet_git projet_git
+cd projet_git                         
+```
+```
+git restore --staged readme.md               # Question 5
+```
+```
+git commit -a -m "Commit changes directly"   # Question 6
+```
+```
+git log                                      # Question 7
+```
+```
+git checkout HEAD~2                          # Question 8
+```
+```
+git reflog                                   # Question 9
+```
+```
+git checkout HEAD@{1}                        # Question 10
+```
+```
+git revert HEAD~1                            # Question 11
+```
+```
+ls                                           # Question 12
+```
+```
+git log                                      # Question 13
+```
+```
+git reset HEAD~2                             # Question 14
+```
+```
+git log                                      # Question 15
+```
+```
+git reset HEAD~2                             # Question 16
+```
 
+
+## Exercice 8 :
+
+
+```
+git config --global alias.s status                                        # Question 1
+```
+```
+git config --global alias.co checkout                                     # Question 2
+```
+```
+git config --global alias.b branch                                        # Question 3                                     
+```
+```
+git config --global alias.ci commit                                       # Question 4                        
+```
+```
+git config --global alias.dog "log --all --decorate --oneline --graph"    # Question 5
+```
+```
+git config --global alias.dag "log --all --decorate --graph"              # Question 6
+```
+```
+git config --global alias.list "diff-tree --no-commit-id --name-only -r"  # Question 7
+```
+```
+git config --global alias.unstage "reset HEAD --"                         # Question 8
+```
+```
+git config --global alias.last "log -1 HEAD"                              # Question 9
+```
+
+
+## Exercice 9 :
+
+
+```
+mkdir hashing_example                                  # Question 1
+cd hashing_example
+```
+```
+echo "Hello World" > hello_world.txt                   # Question 2
+```
+```
+wc -c hello_world.txt                                  # Question 3                                     
+```
+```
+cat hello_world.txt                                    # Question 4                        
+```
+```
+sha1sum hello_world.txt                                # Question 5
+```
+```
+git hash-object hello_world.txt                        # Question 6
+```
+```
+echo -en "blob 11\0Hello World" > hello_world_git.txt  # Question 7
+```
+```
+sha1sum hello_world_git.txt                            # Question 8
+```
 
 
 
