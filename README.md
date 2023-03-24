@@ -1196,4 +1196,57 @@ sha1sum hello_world_git.txt                            # Question 8
 ```
 
 
+## Exercice 10 :
+
+
+```
+cd ..                                                                           # Question 1
+rm -rf git_repository
+mkdir git_repository
+cd git_repository
+git init
+```
+```
+cp ../hashing_example/hello_world.txt .                                          # Question 2
+cp ../hashing_example/hello_world_git.txt .
+git status                             
+```
+```
+find .git/objects                                                                # Question 3                                   
+```
+```
+sha1=$(sha1sum hello_world_git.txt | awk '{print $1}')                           # Question 4
+mkdir -p .git/objects/${sha1:0:2}                     
+```
+```
+install using package manager                                                     # Question 5
+```
+```
+zlib-flate -compress < hello_world_git.txt > .git/objects/${sha1:0:2}/${sha1:2}   # Question 6
+```
+```
+git cat-file -t $sha1                                                             # Question 7
+git cat-file -s $sha1
+git cat-file -p $sha1                   
+```
+```
+cd ..                                                                             # Question 8
+cp -R git_repository git_repository_2
+rm -rf git_repository
+mkdir git_repository
+cd git_repository_2
+git init
+```
+```
+cp ../hashing_example/hello_world.txt .                                            # Question 9
+git add hello_world.txt
+git hash-object hello_world.txt```
+```
+for i in {1..100}; do echo "Hello Mister $i" >> hello_mister.txt; done             # Question 10
+```
+```
+git add hello_mister.txt                                                           # Question 11
+new_file_size=$(git ls-files --stage hello_mister.txt | awk
+```
+
 
