@@ -1,11 +1,23 @@
 LINUX
 
+J'ai mis dans un meme lien GitHub tous mes TD (meme le TD 4) et une explication brève de mon DashBoard
+
 
 # PROJET LINUX
 
 MON DASHBOARD : http://35.180.139.168:8050/
 
+## Explication du Dashboard :
 
+J'ai utilisé le site suivant https://capital.com/fr/graphique-de-ltc-eur afin de récupérer le prix du Litecoin (LTC, une crypto-monnaie) en euro.
+J'ai d'abord curl le lien grace au regex, puis crée chacun les fichier disponible sur mon lien GitHub.
+Le Dashboard renvoi un graphique montrant la courbe du prix du Litecoin en fonction du temps (j'ai malheureusement dû tout recommencer, à cause de problème avec ma machine virtuelle d'où le peu de valeurs présentes.)
+Il y a juste en-dessous du graphique un tableau de synthèse regroupant pour le jour d'aujourd'hui le prix d'ouverture (pour une cryptomonnaie c'est le premier prix obtenue à minuit), le prix à la cloture (le prix au moment auquel on regarde le graphique), le prix maximum et minimum atteint dans la journée, la variation et la volatilité donnée en pourcentage, et le rendement. La volatilité, la variation et le rendement sont calculés par rapport au prix précédent obtenue il y a 5 minutes (vu que notre programme récupère le prix toute les 5 minutes), je sais que ce n’était absolument pas ce qui était demandé… Je n’ai malheureusement pas réussie a faire une synthèse des métriques tous les jours à 20h, j’ai seulement réussie à automatiser la tache tous les jours à 20 heures, faute de temps (et de compétences un petit peu je le concède…).
+J’ai également installé un bouton « Obtenir le dernier prix » sur le site en haut à droite afin d’obtenir le dernier prix, ce bouton non seulement renvoi le dernier prix actualisé mais actualise également le graphique (j’ai mis 2 callback associé au bouton).
+
+Si j’avais eu plus de temps, j’aurais réussie à faire un tableau de synthèse actualisé à 20h chaque jour, et avoir une interface un peu plus agréable à utiliser.
+
+PS : Dans de rare cas, le site bug et cela se répercute sur le Dashboard, mais pas de panique il suffit de recharger quelque seconde le Dashboard et le site marche. Désolé pour cet imprévu, je me suis rendu compte après que le site n’était pas super fiable non plus…
 
 
 
@@ -1265,6 +1277,8 @@ new_file_size=$(git ls-files --stage hello_mister.txt | awk
 
 
 ## Exercice 1 :
+
+Je n'ai malheuresement pas eu le temps de faire le TD, mais j'ai mis les instruction pour faire chacun des exercices. Je suis censé en groupe avec Syphax BENHAMOUCHE.
 
 ```
 git clone <repository URL>                                        
